@@ -27,7 +27,7 @@ const Banners = () => {
 
   return (
     <div className="banner-container">
-      <h1>Movie Banners</h1>
+      <h1>Recent Movie</h1>
       <div className="banner-scroll">
         {movies.map(movie => (
           <div key={movie.id} className="banner-item">

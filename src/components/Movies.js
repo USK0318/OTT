@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchPopularMovies } from '../api/tmdb';
 import './Movies.css'; // Import the CSS file
+import Banners from './Banners';
+import MovieSearchComponent from './MovieSearchComponent';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -28,6 +30,8 @@ const Movies = () => {
 
   return (
     <div className="movies-container"> {/* Apply movies-container class */}
+    <Banners />
+    <MovieSearchComponent />
       <h1>Popular Movies</h1>
       <div className="movies-grid"> {/* Apply movies-grid class */}
         {movies.map(movie => (
@@ -42,6 +46,7 @@ const Movies = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

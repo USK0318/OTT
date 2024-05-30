@@ -23,6 +23,8 @@ export const fetchMovieDetails = async (id) => {
   return response.data;
 };
 
+//###########################################################################
+
 export const searchMovies = async (query) => {
   try {
     const response = await axios.get(`${BASE_URL}/search/movie`, {
