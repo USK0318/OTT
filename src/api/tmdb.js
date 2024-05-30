@@ -23,7 +23,6 @@ export const fetchMovieDetails = async (id) => {
   return response.data;
 };
 
-//###########################################################################
 
 export const searchMovies = async (query) => {
   try {
@@ -40,6 +39,7 @@ export const searchMovies = async (query) => {
   }
 };
 
+
 export const fetchMovieCredits = async (id) => {
   try {
     const response = await axios.get(`${BASE_URL}/movie/${id}/credits`, {
@@ -53,6 +53,7 @@ export const fetchMovieCredits = async (id) => {
     throw error;
   }
 };
+//###########################################################################
 
 export const fetchSimilarMovies = async (id) => {
   try {

@@ -1,14 +1,15 @@
 import React from 'react';
+import MovieCard from './MovieCard';
 
 const MovieList = ({ movies }) => {
   return (
     <div>
       {movies.length > 0 ? (
-        <ul>
+        <div>
           {movies.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
+            <MovieCard key={movie.id} movie={movie} />
           ))}
-        </ul>
+        </div>
       ) : (
         <p>No movies found</p>
       )}

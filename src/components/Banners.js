@@ -1,4 +1,3 @@
-// src/components/Banners.js
 import React, { useEffect, useState } from 'react';
 import { fetchPopularMovies } from '../api/tmdb';
 
@@ -39,8 +38,7 @@ const Banners = () => {
           </div>
         ))}
       </div>
-      <style>
-        {`
+      <style jsx>{`
           .banner-container {
             padding: 20px;
             font-family: Arial, sans-serif;
@@ -58,8 +56,8 @@ const Banners = () => {
             display: flex;
             flex-direction: row;
             align-items: center;
-            width: 650px; /* Adjust the card width */
-            height: 280px; /* Adjust the card height */
+            width: 100%; /* Adjusted to take full width */
+            max-width: 650px; /* Max width for card */
             margin-right: 20px; /* Spacing between items */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,10 +87,16 @@ const Banners = () => {
           }
 
           .banner-item img {
-            width: 200px; /* Adjust the image width */
+            width: 30%; /* Adjust the image width */
             height: auto;
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .banner-item {
+              max-width: 100%; /* Adjusted to take full width */
+            }
           }
         `}
       </style>

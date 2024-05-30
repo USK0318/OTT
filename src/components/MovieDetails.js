@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetails } from '../api/tmdb';
+import SimilarMovies from './SimilarMovies';
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const MovieDetails = () => {
               <button className="watch-button">Watch Now</button>
             </div>
           </div>
+          <SimilarMovies movieId={id} />
         </div>
       )}
       <style>{`
