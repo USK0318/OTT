@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from '../api/tmdb';
 import SimilarMovies from './SimilarMovies';
+import MovieTrailers from './MovieTrailers';
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -35,10 +36,12 @@ const MovieDetails = () => {
             <h1 className="title">{details.title}</h1>
             <p className="overview">{details.overview}</p>
             <div className="buttons">
-              <button className="download-button">Download</button>
-              <button className="watch-button">Watch Now</button>
+              <Link to={`/credits/${id}`}><button className="download-button">Credits</button></Link>
+              <Link to={`/reviews/${id}`}><button className="watch-button">Reviews</button></Link>
             </div>
+            
           </div>
+          <MovieTrailers movieId={id} />
           <SimilarMovies movieId={id} />
         </div>
       )}
@@ -73,6 +76,7 @@ const MovieDetails = () => {
           max-width: 400px; /* Set max-width to limit image size */
           width: 100%; /* Set image width to 100% */
           height: auto;
+          margin-top: 30px; /* Adjust margin-top to center image vertically */
           border-radius: 12px 12px 0 0;
         }
 

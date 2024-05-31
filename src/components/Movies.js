@@ -4,6 +4,11 @@ import { fetchPopularMovies } from '../api/tmdb';
 import './Movies.css'; // Import the CSS file
 import Banners from './Banners';
 import MovieSearchComponent from './MovieSearchComponent';
+import NowPlayingMovies from './NowPlayingMovies';
+import TopRatedMovies from './TopRatedMovies';
+import UpcomingMovies from './UpcomingMovies';
+import TrendingMovies from './TrendingMovies';
+import PopularTVShows from './PopularTVShows';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -46,7 +51,11 @@ const Movies = () => {
           </div>
         ))}
       </div>
-      
+      <NowPlayingMovies />
+      <TopRatedMovies />
+      <UpcomingMovies />
+      <TrendingMovies />
+      <PopularTVShows />
     </div>
   );
 };
