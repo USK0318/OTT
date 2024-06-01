@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchTVShowDetails } from '../api/tmdb'; // Import the function to fetch TV show details
+import TVShowVideos from './TVShowVideos';
 
 const TVShowDetails = () => {
   const { id } = useParams();
@@ -20,7 +21,9 @@ const TVShowDetails = () => {
     };
 
     getDetails();
-  }, [id]);
+        }, [id]);
+
+     
 
   return (
     <div className="tv-show-details-container">
@@ -37,6 +40,7 @@ const TVShowDetails = () => {
               <Link to={`/tv-credits/${id}`} className="button"><button className="download-button">Credits</button></Link>
               <Link to={`/tv-reviews/${id}`} className="button"><button className="watch-button">Reviews</button></Link>
             </div>
+            <TVShowVideos tvShowId={id} />
           </div>
         </div>
       )}

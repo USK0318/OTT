@@ -36,7 +36,7 @@ const MovieTrailers = ({ movieId }) => {
 
   return (
     <div>
-      <h2 style={{ textAlign: 'center', fontSize: '24px', margin: '30px' }}>Movie Trailers</h2>
+      <h2 style={{ textAlign: 'center', fontSize: '24px', margin: '20px' }}>Movie Trailers</h2>
       <div className="trailers">
         {videos.map((video) => (
           <div key={video.key} className="trailer">
