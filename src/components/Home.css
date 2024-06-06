@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #e5e5e5;
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-wrap: wrap; /* Added for better responsiveness */
+}
+
+.logo {
+  color: #e50914;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.nav-container {
+  margin-left: auto;
+}
+
+.login-btn {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+}
+
+.login-btn:hover {
+  background-color: #f40612;
+}
+
+.hero {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1280,h_720,q_75,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 12rem 2rem 4rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.email-form input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  flex: 1;
+  max-width: 400px;
+  border-radius: 3px 0 0 3px;
+}
+
+.email-form button {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0 3px 3px 0;
+  flex-shrink: 0;
+}
+
+.email-form button:hover {
+  background-color: #f40612;
+}
+
+.card-container {
+  flex-wrap: wrap;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 800px; /* Set a more responsive width */
+  height: 230px;
+  padding: 2rem;
+  position: relative; /* Added for background image positioning */
+  overflow: hidden; /* Ensure background image fits within border radius */
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  margin-top: 50px;
+  
+}
+
+.card p {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: #e5e5e5;
+}
+
+.card1, .card2, .card3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 2rem); /* Adjust width for smaller screens */
+  }
+
+  .hero {
+    padding: 8rem 1rem 2rem;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .email-form {
+    flex-wrap: wrap;
+  }
+
+  .email-form input,
+  .email-form button {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+
+  .email-form button {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .login-btn {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .email-form input,
+  .email-form button {
+    width: 100%;
+  }
+
+  .email-form button {
+    margin-top: 1rem;
+  }
+}

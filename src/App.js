@@ -9,18 +9,29 @@ import MovieReviews from './components/MovieReviews';
 import TVShowDetails from './components/Tvdetals';
 import TVShowCredits from './components/Tvcredits';
 import TVShowReviews from './components/Tvreview';
+import Home from './components/Home';
+import PopularTVShows from './components/PopularTVShows';
+import TrendingMovies from './components/TrendingMovies';
+import UpcomingMovies from './components/UpcomingMovies';
+import TopRatedMovies from './components/TopRatedMovies';
 
 function App() {
   return (
     <div className='final'>
       <Routes>
-        <Route path='/' element={<Movies />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/popularmovies' element={<Movies />} />
         <Route path='/movies/:id' element={<MovieDetails />} />
         <Route path='/credits/:id' element={<MovieCreditsWrapper />} />
         <Route path='/reviews/:id' element={<MovieReviewsWrapper />} />
         <Route path='/tv-shows/:id' element={<TVShowDetails />} />
         <Route path='/tv-credits/:id' element={<TVShowCreditsWrapper />} />
         <Route path='/tv-reviews/:id' element={<TVShowReviewsWrapper />} />
+        <Route path='/populartvshows' element={<PopularTVShows />} />
+        <Route path='/trendingmovies' element={<TrendingMovies />} />
+        <Route path='/upcomingmovies' element={<UpcomingMovies />} />
+        <Route path='/topratedmovies' element={ <TopRatedMovies />} />
+
       </Routes>
     </div>
   );

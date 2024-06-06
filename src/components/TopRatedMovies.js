@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchTopRatedMovies } from '../api/tmdb';
+import { Link } from 'react-router-dom';
 
 const TopRatedMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -31,6 +32,7 @@ const TopRatedMovies = () => {
       <div className="movie-cards">
         {movies.map((movie) => (
           <div key={movie.id} className="movie-card">
+            <Link to={`/movies/${movie.id}`}>
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={movie.title}
@@ -40,6 +42,7 @@ const TopRatedMovies = () => {
               <p>Rating: {movie.vote_average}</p>
               <p>Release Date: {new Date(movie.release_date).toLocaleDateString()}</p>
             </div>
+            </Link>
           </div>
         ))}
       </div>

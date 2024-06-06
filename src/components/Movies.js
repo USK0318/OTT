@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchPopularMovies } from '../api/tmdb';
 import './Movies.css'; // Import the CSS file
-import Banners from './Banners';
-import MovieSearchComponent from './MovieSearchComponent';
-import NowPlayingMovies from './NowPlayingMovies';
-import TopRatedMovies from './TopRatedMovies';
-import UpcomingMovies from './UpcomingMovies';
-import TrendingMovies from './TrendingMovies';
-import PopularTVShows from './PopularTVShows';
+// import Banners from './Banners';
+// import MovieSearchComponent from './MovieSearchComponent';
+// import NowPlayingMovies from './NowPlayingMovies';
+// import TopRatedMovies from './TopRatedMovies';
+// import UpcomingMovies from './UpcomingMovies';
+// import TrendingMovies from './TrendingMovies';
+// import PopularTVShows from './PopularTVShows';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -35,9 +35,9 @@ const Movies = () => {
 
   return (
     <div className="movies-container"> {/* Apply movies-container class */}
-    <Banners />
-    <MovieSearchComponent />
-      <h1>Popular Movies</h1>
+    {/* <Banners />
+    <MovieSearchComponent /> */}
+      <h1 style={{fontsize: '1.5rem', textAlign: 'center', padding: '1rem 0'}}>Popular Movies</h1>
       <div className="movies-grid"> {/* Apply movies-grid class */}
         {movies.map(movie => (
           <div key={movie.id} className="movie-item"> {/* Apply movie-item class */}
@@ -51,11 +51,12 @@ const Movies = () => {
           </div>
         ))}
       </div>
-      <NowPlayingMovies />
+
+      {/* <NowPlayingMovies />
       <TopRatedMovies />
       <UpcomingMovies />
       <TrendingMovies />
-      <PopularTVShows />
+      <PopularTVShows /> */}
     </div>
   );
 };

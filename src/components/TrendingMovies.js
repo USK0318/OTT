@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from '../api/tmdb';
+import { Link } from 'react-router-dom';
 
 const TrendingMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -37,9 +38,12 @@ const TrendingMovies = () => {
           This Week
         </button>
       </div>
-      <div className="movie-cards">
+      <div className="movie-cards">.
+      
         {movies.map((movie) => (
+          
           <div key={movie.id} className="movie-card">
+            <Link to={`/movies/${movie.id}`}>
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={movie.title}
@@ -49,7 +53,9 @@ const TrendingMovies = () => {
               <p>Rating: {movie.vote_average}</p>
               <p>Release Date: {new Date(movie.release_date).toLocaleDateString()}</p>
             </div>
+            </Link>
           </div>
+
         ))}
       </div>
       <style jsx>{`
