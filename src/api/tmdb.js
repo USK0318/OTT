@@ -1,7 +1,7 @@
 // src/api/tmdb.js
 import axios from 'axios';
 
-const API_KEY = '71bef99e3aa17fa8fdd41c6dfcfa1f19';
+const API_KEY = '71bef99e3aa17fa8fdd41c6dfcfa1f198';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 // Fetch Popular Movies

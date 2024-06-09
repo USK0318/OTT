@@ -10,7 +10,6 @@ function Home() {
         <nav className="navbar">
           <div className="logo">U$K - Movies</div>
           <div className="nav-container">
-            <button className="login-btn">Sign In</button>
           </div>
         </nav>
       </header>
@@ -25,7 +24,9 @@ function Home() {
           </div>
         </div>
       </section>
+      <div style={{marginTop:'60px'}}>
       <MovieSearchComponent /> 
+      </div>
       <div className="card-container">
         <Link to={'/popularmovies'}>
           <div className="card card1">
